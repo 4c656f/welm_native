@@ -1,7 +1,9 @@
 import React, {FC, useEffect} from 'react';
-import {Button, SafeAreaView, Text, View} from "react-native";
+import {Button, Keyboard, SafeAreaView, Text, TouchableWithoutFeedback, View} from "react-native";
 import {NavigationProp, } from "@react-navigation/native";
-
+import {homeStyles} from "./HomeStyles";
+import TopBarSearch from "../../../components/ui/TopBarSearch/TopBarSearch";
+import HomePage from "../../../components/pagesComponents/HomePage/HomePage";
 
 interface HomeProps {
     navigation: NavigationProp<any, any>;
@@ -14,12 +16,15 @@ const Home:FC<HomeProps> = ({navigation}) => {
 
 
     return (
-        <SafeAreaView>
-            <Text>
-                Home
-            </Text>
-            <Button title={"navigate to post"} onPress={()=> navigation.navigate("FullPost")} />
-        </SafeAreaView>
+        <TouchableWithoutFeedback
+            onPress={()=>Keyboard.dismiss()}
+        >
+            <SafeAreaView
+                style={homeStyles.container}
+            >
+                <HomePage/>
+            </SafeAreaView>
+        </TouchableWithoutFeedback>
     );
 };
 

@@ -1,19 +1,32 @@
+import {StyleSheet} from "react-native";
+
 export const indexStyleVariables = {
+
+
+    //fonts
     defaultElementActiveColor: "white",
     defaultElementColor: "gray",
-    defaultButtonBg: "gray"
+    secondColor: "#5b5b5b",
+
+    defaultElementActiveColorOpposite: "black",
+    defaultElementColorOpposite: "gray",
+
+    //buttons
+    defaultButtonBg: "#232323",
+    defaultButtonBgHover: "#3a3a3a",
+    defaultButtonBgHoverOp: 0.5,
+    defaultButtonBgActive: undefined,
+    defaultButtonBorderRadius: 7,
+    defaultButtonBorderColor: "#333333",
+
+
+    //theme
+    defaultBg: "black"
 
 }
-import {StyleSheet} from "react-native"
-
 export const indexStyles = StyleSheet.create({
-    defaultFontStyle: {
-        color: "white"
-    },
-    defaultActiveButton:{
-        backgroundColor: "#d0d0d0"
-    },
-    defaultButton:{
-        backgroundColor: "#575757"
+        font: {
+            color: indexStyleVariables.defaultElementActiveColor
+        }
     }
-});
+)
