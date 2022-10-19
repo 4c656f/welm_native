@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         justifyContent: "space-evenly",
         alignItems: "center",
         // @ts-ignore
-        backgroundColor: "#eaeaea",
+        backgroundColor: "#2d2d2d",
         borderRadius: indexStyleVariables.defaultButtonBorderRadius + 8
     },
     routeContainer: {

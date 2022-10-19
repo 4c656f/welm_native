@@ -21,7 +21,8 @@ export const Styles = StyleSheet.create({
         position: "absolute",
         top: 70,
         width: "100%",
-        height: screen.height / 2
+        height: screen.height / 2,
+
     },
     cancelText: {
         fontSize: 10,

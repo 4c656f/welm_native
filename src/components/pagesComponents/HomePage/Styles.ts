@@ -12,6 +12,7 @@ export const Styles = StyleSheet.create({
     topBar: {
         height: 50,
         width: "80%",
+        zIndex: 1
 
     },
 

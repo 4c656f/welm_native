@@ -8,7 +8,7 @@ export const indexStyleVariables = {
     defaultElementColor: "gray",
     secondColor: "#5b5b5b",
 
-    defaultElementActiveColorOpposite: "black",
+    defaultElementActiveColorOpposite: "white",
     defaultElementColorOpposite: "gray",
 
     //buttons
