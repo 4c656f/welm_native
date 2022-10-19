@@ -1,7 +1,7 @@
-export interface ITag{
-    id:number;
-    ticker_tag:string;
-    post_id:number;
+export interface ITag {
+    id: number;
+    ticker_tag: string;
+    post_id: number;
 }
 
 export interface IPost {
@@ -14,6 +14,6 @@ export interface IPost {
     likes: number;
     tags: ITag[];
     comments: number;
-    like_initial:number;
-    is_saved:number;
+    like_initial: number;
+    is_saved: number;
 }

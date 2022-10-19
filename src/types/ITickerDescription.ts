@@ -1,6 +1,6 @@
 export interface ITickerDescription {
     ticker: string
-    company_name:string
+    company_name: string
     id: number
-    exchange:string
+    exchange: string
 }

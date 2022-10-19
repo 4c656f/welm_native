@@ -1,10 +1,10 @@
 import {StyleSheet} from "react-native"
-import {indexStyleVariables} from "../../../utils/styles";
-import {ignoreExternalModules} from "@expo/webpack-config/webpack/addons/withUnimodules";
+import {indexStyleVariables} from "../../../materials/styles";
+
 
 export const styles = StyleSheet.create({
     container: {
-        position:"absolute",
+        position: "absolute",
         left: 0,
         right: 0,
         bottom: 0,
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         paddingBottom: 15
 
     },
-    insideContainer:{
+    insideContainer: {
         display: "flex",
         backgroundColor: "black",
         flexDirection: "row",
@@ -29,19 +29,19 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
 
     },
-    font:{
+    font: {
         color: indexStyleVariables.defaultElementColor,
         fontSize: 12,
         marginTop: 5
     },
 
-    button:{
+    button: {
         borderRadius: indexStyleVariables.defaultButtonBorderRadius,
     },
-    activeButton:{
+    activeButton: {
         backgroundColor: indexStyleVariables.defaultButtonBgActive
     },
-    nonActiveButton:{
+    nonActiveButton: {
 
         backgroundColor: indexStyleVariables.defaultButtonBg
     }

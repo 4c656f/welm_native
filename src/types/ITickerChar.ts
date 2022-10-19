@@ -1,10 +1,8 @@
-
-
-export interface ITickerCharData{
+export interface ITickerCharData {
     date: string
     price: number
 }
 
-export interface ITickerChar{
-    [ ticker:string ]: ITickerCharData[];
+export interface ITickerChar {
+    [ticker: string]: ITickerCharData[];
 }

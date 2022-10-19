@@ -1,8 +1,7 @@
-import React, {FC, useEffect} from 'react';
-import {Button, Keyboard, SafeAreaView, Text, TouchableWithoutFeedback, View} from "react-native";
-import {NavigationProp, } from "@react-navigation/native";
+import React, {FC} from 'react';
+import {Keyboard, SafeAreaView, TouchableWithoutFeedback} from "react-native";
+import {NavigationProp,} from "@react-navigation/native";
 import {homeStyles} from "./HomeStyles";
-import TopBarSearch from "../../../components/ui/TopBarSearch/TopBarSearch";
 import HomePage from "../../../components/pagesComponents/HomePage/HomePage";
 
 interface HomeProps {
@@ -10,14 +9,12 @@ interface HomeProps {
 }
 
 
-const Home:FC<HomeProps> = ({navigation}) => {
-
-
+const Home: FC<HomeProps> = ({navigation}) => {
 
 
     return (
         <TouchableWithoutFeedback
-            onPress={()=>Keyboard.dismiss()}
+            onPress={() => Keyboard.dismiss()}
         >
             <SafeAreaView
                 style={homeStyles.container}

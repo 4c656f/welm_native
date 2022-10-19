@@ -1,5 +1,5 @@
-import React, {FC, useEffect} from 'react';
-import {Button, SafeAreaView, Text, View} from "react-native";
+import React, {FC} from 'react';
+import {Button, SafeAreaView, Text} from "react-native";
 import {NavigationProp} from "@react-navigation/native";
 
 
@@ -7,8 +7,7 @@ interface HomeProps {
     navigation: NavigationProp<any, any>;
 }
 
-const Posts:FC<HomeProps> = ({navigation}) => {
-
+const Posts: FC<HomeProps> = ({navigation}) => {
 
 
     return (
@@ -16,7 +15,7 @@ const Posts:FC<HomeProps> = ({navigation}) => {
             <Text>
                 posts
             </Text>
-            <Button title={"navigate to post"} onPress={()=> navigation.navigate("FullPost")} />
+            <Button title={"navigate to post"} onPress={() => navigation.navigate("FullPost")}/>
         </SafeAreaView>
     );
 };

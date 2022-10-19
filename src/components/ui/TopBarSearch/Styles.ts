@@ -1,34 +1,33 @@
 import {Dimensions, StyleSheet} from "react-native";
-import {indexStyleVariables} from "../../../utils/styles";
+import {indexStyleVariables} from "../../../materials/styles";
 
 const screen = Dimensions.get("screen");
 export const Styles = StyleSheet.create({
-    container:{
+    container: {
         backgroundColor: indexStyleVariables.defaultButtonBg,
-
         borderRadius: indexStyleVariables.defaultButtonBorderRadius,
         flex: 1,
         justifyContent: "center",
-        alignItems: "flex-start"
+        alignItems: "flex-start",
     },
-    input:{
-        color:"white",
+    input: {
+        color: "white",
         width: "100%",
-        height: "100%",
+        height: 50,
         paddingVertical: 13,
         paddingLeft: 20,
     },
-    resultsContainer:{
+    resultsContainer: {
         position: "absolute",
         top: 70,
         width: "100%",
         height: screen.height / 2
     },
-    cancelText:{
+    cancelText: {
         fontSize: 10,
 
     },
-    cancelTextContainer:{
+    cancelTextContainer: {
         position: "absolute",
         right: 0,
         marginRight: 20,
@@ -37,10 +36,10 @@ export const Styles = StyleSheet.create({
         justifyContent: "center",
 
     },
-    fetchingText:{
+    fetchingText: {
         position: "absolute",
         right: 0,
         marginRight: 20,
         fontSize: 10,
-    }
+    },
 })

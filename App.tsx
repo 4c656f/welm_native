@@ -1,4 +1,4 @@
-import { StyleSheet, Platform} from 'react-native';
+import {StyleSheet, Platform, View, Text, SafeAreaView} from 'react-native';
 import React, {FC, useEffect} from "react";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {DefaultTheme, NavigationContainer} from "@react-navigation/native";
@@ -10,20 +10,32 @@ import CustomTabNavigator, {RenderIcon} from "./src/components/ui/CustomTabNavig
 
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import FullPost from "./src/pages/Tabs/SharedStack/FullPost/FullPost";
-import {indexStyleVariables} from "./src/utils/styles";
+import {indexStyleVariables} from "./src/materials/styles";
 import HomeIcon from "./src/components/ui/TabNavigatorIcons/HomeIcon";
 import PostsIcon from "./src/components/ui/TabNavigatorIcons/PostsIcon";
+import TickerPageComponent from "./src/pages/Tabs/SharedStack/TickerPage/TickerPage";
+import {IHomeStackParams} from "./src/types/IHomeStackParams";
+import TickerPage from "./src/pages/Tabs/SharedStack/TickerPage/TickerPage";
+import CustomHeader from "./src/components/ui/CustomHeader/CustomHeader";
 
 
 
 
-const HomeStack = createNativeStackNavigator()
+const HomeStack = createNativeStackNavigator<IHomeStackParams>()
 
 function HomeStackScreen() {
     return (
-        <HomeStack.Navigator screenOptions={{headerShown:false}}>
-            <HomeStack.Screen name="Home" component={Home} />
-            <HomeStack.Screen name="FullPost" component={FullPost} />
+        <HomeStack.Navigator
+            screenOptions={
+                {
+                    header:(props)=><CustomHeader {...props}/>
+                }
+            }
+
+        >
+            <HomeStack.Screen name="Home" component={Home} options={{title: "Home"}}/>
+            <HomeStack.Screen name="FullPost" component={FullPost} options={{title: "Post"}}/>
+            <HomeStack.Screen name="TickerPage" component={TickerPage} options={({route})=>({title: route.params.ticker})}/>
         </HomeStack.Navigator>
     );
 }
@@ -60,17 +72,7 @@ const App:FC = ()=>{
 
           screenOptions={{
               headerShown:false,
-              // tabBarStyle:{
-              //     backgroundColor: 'white',
-              //     position: 'absolute',
-              //     bottom: 20,
-              //     marginHorizontal: 20,
-              //     // Max Height...
-              //     height: 60,
-              //     borderRadius: 10,
-              //     paddingHorizontal: 20,
-              // },
-              // tabBarIcon:({focused})=>{return RenderIcon("home", focused)}
+
           }}
 
           tabBar={(props => <CustomTabNavigator {...props}/>)}

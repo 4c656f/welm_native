@@ -1,14 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View} from "react-native";
 import {Styles} from "./Styles";
 import TopBarSearch from "../../ui/TopBarSearch/TopBarSearch";
 
 const HomePage = () => {
-
-
-
-
-
 
 
     return (

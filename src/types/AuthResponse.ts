@@ -1,6 +1,6 @@
 import {IUser} from "./IUser";
 
-interface IToken{
+interface IToken {
     access_token: string;
     refresh_token: string;
 }
